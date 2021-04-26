@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
+import Tasks from './components/Tasks'
+import {useState} from 'react'
 import 'materialize-css/dist/css/materialize.min.css'
 
 // import "materialize-css/dist/js/materialize.min.js";
@@ -8,10 +10,30 @@ import 'materialize-css/dist/css/materialize.min.css'
 
 function App() {
 
+  const [tasks, setTasks] = useState([{
+    id: 1,
+    text: 'Making breakfast',
+    day: 'April 26th at 7:30 am',
+    reminder: true,
+},
+{
+    id: 2,
+    text: 'Starting work',
+    day: 'April 26th at 9:00 am',
+    reminder: true,
+},
+{
+    id: 3,
+    text: 'Going to the gym',
+    day: 'April 26th at 6:00pm',
+    reminder: true,
+},])
+
   return (
     <div className="App  row">
      <div className="col m6 z-depth-5 offset-m3" >
-     <Header/>
+     <Header className="row"/>
+     <Tasks tasks={tasks}/>
      
      </div>
     </div>
