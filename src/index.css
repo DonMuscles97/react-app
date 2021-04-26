@@ -14,4 +14,9 @@ code {
 
 .App{
   margin-top: 50px;
+ 
+}
+ /* styles for the button component */
+#plus {
+  margin-top: 20px;
 }
