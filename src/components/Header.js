@@ -11,7 +11,7 @@ const Header = (props) => {
     return (
       <div className="row">
         <div className="col m6">
-            <h4 className="left-align">{props.title}</h4>
+            <h4>{props.title}</h4>
         </div>
         <div className="col m6">
           <Button text="button" icon="add" color="" url="#" event={click}/>

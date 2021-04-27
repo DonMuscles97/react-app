@@ -1,8 +1,12 @@
-const Task = () => {
+const Task = ({task}) => {
     return (
-        <div>
-                   
-        </div>
+        <>
+            <li className="collection-item">{task.text}<br></br>
+            <small>{task.day}</small>
+            </li>
+            
+
+        </>
     )
 }
 

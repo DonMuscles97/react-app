@@ -1,12 +1,12 @@
-
+import Task from './Task'
 
 const Tasks = ({tasks}) => {
     
     return (
         <>
-            <ul className="collection ">
+            <ul className="collection left-align">
             {tasks.map((task) => (
-            <li className="collection-item" key={task.id}>{task.text}</li>
+            <Task className="collection-item" key={task.id} task={task}/>
             ))}
             </ul>
             
