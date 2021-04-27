@@ -1,12 +1,12 @@
 import Task from './Task'
 
-const Tasks = ({tasks}) => {
+const Tasks = ({tasks, event}) => {
     
     return (
         <>
             <ul className="collection left-align">
             {tasks.map((task) => (
-            <Task className="collection-item" key={task.id} task={task}/>
+            <Task className="collection-item" key={task.id} task={task} event={event}/>
             ))}
             </ul>
             
@@ -15,3 +15,4 @@ const Tasks = ({tasks}) => {
 }
 
 export default Tasks
+  

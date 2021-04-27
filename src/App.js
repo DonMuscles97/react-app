@@ -29,11 +29,17 @@ function App() {
     reminder: true,
 },])
 
+// delete task from task
+
+const deleteTask = (id) => {
+  setTasks(tasks.filter((task) => task.id != id))
+}
+
   return (
     <div className="App  row">
      <div className="col m6 z-depth-5 offset-m3" >
      <Header className="row"/>
-     <Tasks tasks={tasks}/>
+     <Tasks tasks={tasks} event={deleteTask}/>
      
      </div>
     </div>
