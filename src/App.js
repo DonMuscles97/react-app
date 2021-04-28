@@ -35,11 +35,16 @@ const deleteTask = (id) => {
   setTasks(tasks.filter((task) => task.id != id))
 }
 
+// toggle reminder
+const toggleReminder = (id) => {
+  setTasks(tasks.map((task) => task.id == id ? { ...task, reminder: !task.reminder} : task))
+}
+
   return (
     <div className="App  row">
      <div className="col m6 z-depth-5 offset-m3" >
      <Header className="row"/>
-     {tasks.length > 0 ? <Tasks tasks={tasks} event={deleteTask} /> : 'There are no tasks to delete'}
+     {tasks.length > 0 ? <Tasks tasks={tasks} event={deleteTask} reminder={toggleReminder}/> : 'There are no tasks to delete'}
      
      </div>
     </div>
