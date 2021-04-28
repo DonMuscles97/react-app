@@ -39,7 +39,7 @@ const deleteTask = (id) => {
     <div className="App  row">
      <div className="col m6 z-depth-5 offset-m3" >
      <Header className="row"/>
-     <Tasks tasks={tasks} event={deleteTask}/>
+     {tasks.length > 0 ? <Tasks tasks={tasks} event={deleteTask} /> : 'There are no tasks to delete'}
      
      </div>
     </div>

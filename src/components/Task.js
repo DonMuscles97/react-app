@@ -3,7 +3,7 @@ const Task = ({task, event}) => {
         <>
             <li className="collection-item">{task.text}<br></br>
             <small>{task.day}</small>
-            <i onClick={() => event(task.id)} className="material-icons right red-text" >delete</i>
+            <i id="trash" onClick={() => event(task.id)} className="material-icons right red-text" >delete</i>
             </li>
             
 

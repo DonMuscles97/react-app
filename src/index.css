@@ -20,3 +20,9 @@ code {
 #plus {
   margin-top: 20px;
 }
+
+/*  */
+
+#trash {
+  cursor: pointer;
+}
