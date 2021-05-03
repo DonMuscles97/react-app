@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Tasks from './components/Tasks'
 import {useState} from 'react'
 import 'materialize-css/dist/css/materialize.min.css'
+import AddTask from './components/AddTask'
 
 // import "materialize-css/dist/js/materialize.min.js";
 
@@ -44,6 +45,7 @@ const toggleReminder = (id) => {
     <div className="App  row">
      <div className="col m6 z-depth-5 offset-m3" >
      <Header className="row"/>
+     <AddTask />
      {tasks.length > 0 ? <Tasks tasks={tasks} event={deleteTask} reminder={toggleReminder}/> : 'There are no tasks to delete'}
      
      </div>
