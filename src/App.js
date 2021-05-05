@@ -30,6 +30,13 @@ function App() {
     reminder: true,
 },])
 
+// Add Task
+const addTask = (task) => {
+  const id = Math.floor(Math.random() * 10000) + 1
+  const newTask = {id, ...task}
+  setTasks([...tasks, newTask])
+}
+
 // delete task from task
 
 const deleteTask = (id) => {
@@ -45,7 +52,7 @@ const toggleReminder = (id) => {
     <div className="App  row">
      <div className="col m6 z-depth-5 offset-m3" >
      <Header className="row"/>
-     <AddTask />
+     <AddTask onAdd={addTask}/>
      {tasks.length > 0 ? <Tasks tasks={tasks} event={deleteTask} reminder={toggleReminder}/> : 'There are no tasks to delete'}
      
      </div>
